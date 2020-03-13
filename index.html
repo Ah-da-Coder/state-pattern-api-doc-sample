@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>StatePattern ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html#document-index" class="icon icon-home"> StatePattern
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-state">state module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html#document-index">StatePattern</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html#document-index">Docs</a> &raquo;</li>
+        
+      <li>StatePattern  ドキュメント</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-statepattern-s-documentation">
+<h1>Welcome to StatePattern's documentation!<a class="headerlink" href="#welcome-to-statepattern-s-documentation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-state"></span><div class="section" id="module-state">
+<span id="state-module"></span><h2>state module<a class="headerlink" href="#module-state" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="class">
+<dt id="state.Context">
+<em class="property">class </em><code class="descclassname">state.</code><code class="descname">Context</code><a class="headerlink" href="#state.Context" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>StateパターンのContextクラス</p>
+<dl class="method">
+<dt id="state.Context.action">
+<code class="descname">action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.Context.action" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>動作メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="state.Context.change_state">
+<code class="descname">change_state</code><span class="sig-paren">(</span><em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#state.Context.change_state" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>State変更メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>scene</strong> (<em>str</em>) -- 昼または夜</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="state.Context.greeting">
+<code class="descname">greeting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.Context.greeting" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>挨拶メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="state.State">
+<em class="property">class </em><code class="descclassname">state.</code><code class="descname">State</code><a class="headerlink" href="#state.State" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Stateパターンの抽象クラス</p>
+<dl class="method">
+<dt id="state.State.action">
+<code class="descname">action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.State.action" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>動作メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="state.State.greeting">
+<code class="descname">greeting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.State.greeting" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>挨拶メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="state.TheBeginningOfTheDay">
+<em class="property">class </em><code class="descclassname">state.</code><code class="descname">TheBeginningOfTheDay</code><a class="headerlink" href="#state.TheBeginningOfTheDay" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#state.State" title="state.State"><code class="xref py py-class docutils literal notranslate"><span class="pre">state.State</span></code></a></p>
+<p>Stateパターンの具象クラス。（朝クラス）</p>
+<dl class="method">
+<dt id="state.TheBeginningOfTheDay.action">
+<code class="descname">action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.TheBeginningOfTheDay.action" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>動作メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="state.TheBeginningOfTheDay.greeting">
+<code class="descname">greeting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.TheBeginningOfTheDay.greeting" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>挨拶メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="state.TheEndOfTheDay">
+<em class="property">class </em><code class="descclassname">state.</code><code class="descname">TheEndOfTheDay</code><a class="headerlink" href="#state.TheEndOfTheDay" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#state.State" title="state.State"><code class="xref py py-class docutils literal notranslate"><span class="pre">state.State</span></code></a></p>
+<p>Stateパターンの具象クラス。（夜クラス）</p>
+<dl class="method">
+<dt id="state.TheEndOfTheDay.action">
+<code class="descname">action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.TheEndOfTheDay.action" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>動作メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="state.TheEndOfTheDay.greeting">
+<code class="descname">greeting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.TheEndOfTheDay.greeting" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>挨拶メソッド</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="state.main">
+<code class="descclassname">state.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#state.main" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">モジュール索引</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">検索ページ</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Ah-Da-Coder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
